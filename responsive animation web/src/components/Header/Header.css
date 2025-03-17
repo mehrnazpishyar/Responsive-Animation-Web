@@ -15,9 +15,9 @@
 .header-content h1 {
   font-family: var(--font-family);
   font-weight: 800;
-  font-size: 62px;
+  font-size: 66px;
   line-height: 75px;
-  margin-top: -30px;
+  margin-top: -60px;
   opacity: 0; 
   transform: translateX(-100%);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -44,17 +44,18 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .header-image img {
   width: 100%;
   height: 100%;
+  margin-top: -40px;
 }
+
 .slidingTextContainer {
   position: absolute;
   font-size: 50vh;
-  bottom: -120px;
+  bottom: -90px;
   white-space: nowrap;
   color: #ffffff09;
   width: 50%;
