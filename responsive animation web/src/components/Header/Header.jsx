@@ -4,15 +4,6 @@ import {assets} from '../../assets/assets'
 import { motion } from "framer-motion";
 
 const Header = () => {
-  const h1Ref = useRef(null);
-  const pRef = useRef(null);
-
-  
-  useEffect(() => {
-    h1Ref.current.classList.add('slide-in-left');
-    pRef.current.classList.add('slide-in-left');
-  }, []);
-
   const sliderVariants = {
     initial: {
       x: 0,
@@ -26,15 +17,25 @@ const Header = () => {
       },
     },
   };
+
   return (
     <div className="header" id="home">
     <div className="header-content">
-      <h1 className="gradient__text" ref={h1Ref}>
-      Lorem Ipsum is simply dummy text!
-      </h1>
-      <p ref={pRef}>
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-      </p>
+    <motion.h1
+          className="gradient__text"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Lorem Ipsum is simply dummy text!
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Lorem Ipsum has been the industry's standard dummy text...
+        </motion.p>
 
     </div>
 

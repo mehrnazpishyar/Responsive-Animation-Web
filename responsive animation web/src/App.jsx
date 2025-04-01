@@ -13,10 +13,7 @@ const App = () => {
     <section id="Services">
         <Parallax/>
       </section>
-      <section id="Homepage">
-    <Navbar />
-    <Header/>
-    </section>
+
     </>
   );
 };
