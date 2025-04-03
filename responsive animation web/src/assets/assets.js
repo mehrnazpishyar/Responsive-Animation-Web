@@ -5,6 +5,8 @@ import youtube from "./youtube.png"
 import ai_pic from "./ai.png"
 import planets from "./planets.png"
 import sun from "./sun.png"
+import bg_slate from "./bg_slate.png"
+import ai_2 from "./ai_2.png"
 
 
 
@@ -14,8 +16,7 @@ export const assets = {
     youtube,
     ai_pic,
     planets,
-    sun
-
-
-
+    sun,
+    bg_slate,
+    ai_2 
 }
