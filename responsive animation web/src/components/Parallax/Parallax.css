@@ -14,8 +14,11 @@
   }
   
   @media (max-width: 768px) {
+    .parallax {
+      height: 75vh;
+  }
     .parallax h1 {
-      font-size: 72px;
+      font-size: 13vw;
       text-align: center;
     }
   }
@@ -34,6 +37,7 @@
     .parallax .mountains {
       background-size: contain;
       background-repeat: no-repeat;
+      height: 75vh;
     }
   }
   
@@ -50,6 +54,7 @@
     .parallax .sun {
       background-size: contain;
       background-repeat: no-repeat;
+      height: 75vh;
     }
   }
   
@@ -76,3 +81,15 @@
     100% { opacity: 1; transform: scale(1.5); }
   }
   
+  @media (max-width: 480px) {
+    .parallax {
+        height: 60vh;
+    }
+    .parallax .mountains, .parallax .sun {
+        height: 60vh;
+    }
+    .star {
+        width: 1.5px;
+        height: 1.5px;
+    }
+}

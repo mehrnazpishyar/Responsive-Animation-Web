@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header" id="home">
+    <div className="header">
     <div className="header-content">
     <motion.h1
           className="gradient__text"
@@ -40,7 +40,19 @@ const Header = () => {
     </div>
 
     <div className="header-image">
-      <img src={assets.ai_pic} alt="header"/>
+       <motion.img
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView ={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                    delay: 0.4,
+                  }}
+                  src={assets.ai_pic}
+                  alt=""
+                  className="service-img"
+                />
     </div>
     <motion.div
         className="slidingTextContainer"

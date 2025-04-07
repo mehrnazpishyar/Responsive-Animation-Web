@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <main className="services-section">
+    <main className="services-section" id="Services">
       <div className="services-wrapper">
         <div className="left-section">
           <motion.h1
@@ -48,11 +48,11 @@ const Services = () => {
      
         <div className="image-container">
           <motion.img
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView ={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0,  y: -100 }}
+            whileInView ={{ opacity: 1,  y: 0}}
             transition={{
               type: "spring",
-              stiffness: 50,
+              stiffness: 30,
               damping: 5,
               delay: 0.4,
             }}

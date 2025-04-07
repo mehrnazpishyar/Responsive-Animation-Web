@@ -1,111 +1,141 @@
 .contact {
-  height: 100%;
-  max-width: 1366px;
-  margin-top:50px ;
+  max-width: 85rem;
+  margin: 3rem auto;
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding: 50px;
-}
-
-@media (max-width: 768px) {
-  .contact {
-    width: 100%;
-    padding: 10px;
-    flex-direction: column;
-  }
+  gap: 3rem;
+  padding: 3rem;
+  flex-wrap: wrap;
 }
 
 .textContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-@media (max-width: 768px) {
-  .textContainer {
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-    margin-top: 70px;
-  }
+  gap: 1.5rem;
 }
 
 .textContainer h1 {
-  font-size: 70px;
-  line-height: 30px;
+  font-size: 4rem;
+  line-height: 1.2;
   color: orange;
-}
-
-@media (max-width: 768px) {
-  .textContainer h1 {
-    font-size: 36px;
-  }
 }
 
 .textContainer h2 {
   color: white;
+  font-size: 1.2rem;
 }
 
-.textContainer span{
+.textContainer span {
   font-weight: 500;
   color: orange;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .formContainer {
   flex: 1;
   position: relative;
-  margin-top: 50px;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
 }
 
-@media (max-width: 768px) {
-  .formContainer {
-    padding: 50px;
-    width: 100%;
-  }
-}
-
-.formContainer .phoneSvg {
+.phoneSvg {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
   stroke: orange;
   position: absolute;
-  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
-.formContainer form {
+form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.formContainer form input,
-.formContainer form textarea {
-  padding: 20px;
+form input,
+form textarea {
+  padding: 1rem;
   background-color: transparent;
   border: 1px solid white;
   color: white;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .formContainer form input,
-  .formContainer form textarea {
-    padding: 10px;
-  }
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 6px rgba(255, 165, 0, 0.5);
 }
 
-.formContainer form button {
-  padding: 20px;
+form button {
+  padding: 1rem;
   border: none;
   background-color: orange;
   cursor: pointer;
   font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
+form button:hover {
+  background-color: darkorange;
+}
+
+/* ---------------------- Responsive ---------------------- */
+
 @media (max-width: 768px) {
-  .formContainer form button {
-    padding: 10px;
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .textContainer {
+    text-align: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .textContainer h1 {
+    font-size: 2.5rem;
+  }
+
+  .formContainer {
+    padding: 2rem;
+  }
+
+  .phoneSvg {
+    max-width: 18rem;
+  }
+
+  form input,
+  form textarea {
+    padding: 0.75rem;
+  }
+
+  form button {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .textContainer h1 {
+    font-size: 2rem;
+  }
+
+  .phoneSvg {
+    max-width: 14rem;
   }
 }

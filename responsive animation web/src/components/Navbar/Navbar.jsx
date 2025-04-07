@@ -6,7 +6,7 @@ import { assets } from "../../assets/assets";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" id="Home">
       <NavSidebar />
       <div className="wrapper">
         <motion.span

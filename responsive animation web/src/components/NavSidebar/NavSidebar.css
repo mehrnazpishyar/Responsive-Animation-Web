@@ -33,6 +33,8 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  font-weight: 600;
+  color: blue;
 }
 
 .sidebar .bg .links a {
@@ -41,10 +43,19 @@
 
 @media (max-width: 768px) {
   .sidebar .bg .links a {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
+
+@media (max-width: 480px) {
+  .sidebar .bg .links {
+      gap: 20px;
+  }
+  .sidebar .bg .links a {
+      font-size: 18px;
+  }
+}
 .sidebar button {
   z-index: 999;
   position: fixed;
@@ -57,3 +68,4 @@
   border: none;
   cursor: pointer;
 }
+

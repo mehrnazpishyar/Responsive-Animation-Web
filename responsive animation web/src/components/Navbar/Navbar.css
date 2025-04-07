@@ -1,39 +1,70 @@
 .navbar {
-    height: 100px;
+  height: 10vh;
+  padding: 0 2rem;
+}
+
+.navbar .wrapper {
+  max-width:100%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 8vh;
+    padding: 0 1.5rem;
   }
-  
+}
+
+@media (max-width: 768px) {
   .navbar .wrapper {
-    max-width: 1366px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: flex-end;
+    padding: 1.5rem 1rem;
   }
-  
-  @media (max-width: 768px) {
-    .navbar .wrapper {
-      justify-content: flex-end;
-      padding: 20px;
-    }
-  }
-  
+}
+
+.navbar .wrapper span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
   .navbar .wrapper span {
-    font-weight: bold;
+    display: none;
   }
-  
-  @media (max-width: 768px) {
-    .navbar .wrapper span {
-      display: none;
-    }
+}
+
+.navbar .wrapper .social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .wrapper .social a {
+  display: block;
+}
+
+.navbar .wrapper .social img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar .wrapper .social img:hover {
+  transform: scale(1.2); 
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 6vh;
+    padding: 0 1rem;
   }
-  
   .navbar .wrapper .social {
-    display: flex;
-    gap: 20px;
+    gap: 1rem;
   }
-  
   .navbar .wrapper .social img {
-    width: 18px;
-    height: 18px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
+}

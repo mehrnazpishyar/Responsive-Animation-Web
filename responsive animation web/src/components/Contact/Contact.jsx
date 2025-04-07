@@ -30,6 +30,7 @@ const Contact = () => {
       variants={variants}
       initial="initial"
       whileInView="animate"
+      id="Contact" 
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Contact</motion.h1>
@@ -50,7 +51,7 @@ const Contact = () => {
           whileInView={{ opacity: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <svg width="400px" height="400px" viewBox="0 0 32.666 32.666">
+          <svg viewBox="0 0 32.666 32.666">
             <motion.path
               strokeWidth={0.2}
               fill="none"
