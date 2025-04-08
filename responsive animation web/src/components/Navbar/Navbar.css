@@ -4,8 +4,8 @@
 }
 
 .navbar .wrapper {
-  max-width:100%;
-  margin:0 auto;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,7 +52,7 @@
 }
 
 .navbar .wrapper .social img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 @media (max-width: 480px) {

@@ -3,7 +3,6 @@ import { assets } from "../../assets/assets";
 import "./Services.css";
 import { motion } from "framer-motion";
 
-
 const Services = () => {
   return (
     <main className="services-section" id="Services">
@@ -11,7 +10,7 @@ const Services = () => {
         <div className="left-section">
           <motion.h1
             initial={{ opacity: 0, y: -100 }}
-            whileInView ={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -24,7 +23,7 @@ const Services = () => {
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            whileInView ={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -45,11 +44,10 @@ const Services = () => {
           </motion.div>
         </div>
 
-     
         <div className="image-container">
           <motion.img
-            initial={{ opacity: 0,  y: -100 }}
-            whileInView ={{ opacity: 1,  y: 0}}
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               type: "spring",
               stiffness: 30,
@@ -61,19 +59,19 @@ const Services = () => {
             className="service-img"
           />
           <motion.div
-              initial={{ opacity: 0, y: -100 }}
-              whileInView ={{ opacity: 1, y: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: 0.8,
-              }}
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 0.8,
+            }}
             className="highlight-circle"
           ></motion.div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
-            whileInView ={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -88,7 +86,7 @@ const Services = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
-          whileInView ={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 100,

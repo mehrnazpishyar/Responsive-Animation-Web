@@ -6,16 +6,16 @@ import mountains from "/mountains.png";
 import { assets } from "../../assets/assets";
 
 const generateStars = (count) => {
-    return Array.from({ length: count }).map((_, i) => ({
-      id: i,
-      top: Math.random() * 100 + "%",
-      left: Math.random() * 100 + "%",
-      animationDelay: Math.random() * 2 + "s",
-    }));
-  };
+  return Array.from({ length: count }).map((_, i) => ({
+    id: i,
+    top: Math.random() * 100 + "%",
+    left: Math.random() * 100 + "%",
+    animationDelay: Math.random() * 2 + "s",
+  }));
+};
 
 const Parallax = () => {
-    const stars = generateStars(100);
+  const stars = generateStars(100);
 
   const ref = useRef();
 
@@ -30,7 +30,7 @@ const Parallax = () => {
   return (
     <div className="parallax" ref={ref}>
       <motion.h1 style={{ y: yText }}>Lorem Ipsum</motion.h1>
-      
+
       <motion.div
         className="mountains"
         style={{ backgroundImage: `url(${mountains})` }}
@@ -39,7 +39,7 @@ const Parallax = () => {
         className="sun"
         style={{ backgroundImage: `url(${assets.sun})`, y: yBg }}
       ></motion.div>
-       <div className="stars-container">
+      <div className="stars-container">
         {stars.map((star) => (
           <div
             key={star.id}
@@ -53,7 +53,6 @@ const Parallax = () => {
         ))}
       </div>
     </div>
-    
   );
 };
 

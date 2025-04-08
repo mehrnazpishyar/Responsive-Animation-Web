@@ -1,95 +1,102 @@
 .parallax {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.parallax h1 {
+  font-size: 100px;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    height: 75vh;
   }
-  
   .parallax h1 {
-    font-size: 100px;
-    color:aliceblue;
+    font-size: 13vw;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .parallax {
-      height: 75vh;
-  }
-    .parallax h1 {
-      font-size: 13vw;
-      text-align: center;
-    }
-  }
-  
+}
+
+.parallax .mountains {
+  background-image: url("/mountains.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
   .parallax .mountains {
-    background-image: url("/mountains.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75vh;
   }
-  
-  @media (max-width: 768px) {
-    .parallax .mountains {
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 75vh;
-    }
-  }
-  
+}
+
+.parallax .sun {
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
   .parallax .sun {
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75vh;
   }
-  
-  @media (max-width: 768px) {
-    .parallax .sun {
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 75vh;
-    }
+}
+
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: rgb(249, 249, 108);
+  border-radius: 50%;
+  animation: twinkle 2s infinite alternate;
+  opacity: 0.8;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
   }
-  
-  .stars-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
   }
-  
+}
+
+@media (max-width: 480px) {
+  .parallax {
+    height: 60vh;
+  }
+  .parallax .mountains,
+  .parallax .sun {
+    height: 60vh;
+  }
   .star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: rgb(249, 249, 108);
-    border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
-    opacity: 0.8;
+    width: 1.5px;
+    height: 1.5px;
   }
-  
-  @keyframes twinkle {
-    0% { opacity: 0.5; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.5); }
-  }
-  
-  @media (max-width: 480px) {
-    .parallax {
-        height: 60vh;
-    }
-    .parallax .mountains, .parallax .sun {
-        height: 60vh;
-    }
-    .star {
-        width: 1.5px;
-        height: 1.5px;
-    }
 }

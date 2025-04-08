@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import "./Header.css"
-import {assets} from '../../assets/assets'
+import React, { useEffect, useRef } from "react";
+import "./Header.css";
+import { assets } from "../../assets/assets";
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -20,8 +20,8 @@ const Header = () => {
 
   return (
     <div className="header">
-    <div className="header-content">
-    <motion.h1
+      <div className="header-content">
+        <motion.h1
           className="gradient__text"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -36,25 +36,24 @@ const Header = () => {
         >
           Lorem Ipsum has been the industry's standard dummy text...
         </motion.p>
+      </div>
 
-    </div>
-
-    <div className="header-image">
-       <motion.img
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView ={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 20,
-                    delay: 0.4,
-                  }}
-                  src={assets.ai_pic}
-                  alt=""
-                  className="service-img"
-                />
-    </div>
-    <motion.div
+      <div className="header-image">
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.4,
+          }}
+          src={assets.ai_pic}
+          alt=""
+          className="service-img"
+        />
+      </div>
+      <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
@@ -62,8 +61,8 @@ const Header = () => {
       >
         Lorem Ipsum
       </motion.div>
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Header
+export default Header;

@@ -30,18 +30,24 @@ const Contact = () => {
       variants={variants}
       initial="initial"
       whileInView="animate"
-      id="Contact" 
+      id="Contact"
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Contact</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail:  <span>hello@gmail.com</span></h2>
+          <h2>
+            Mail: <span>hello@gmail.com</span>
+          </h2>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address: <span>street Germany </span></h2>
+          <h2>
+            Address: <span>street Germany </span>
+          </h2>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone: <span>+49 234 5678</span> </h2>
+          <h2>
+            Phone: <span>+49 234 5678</span>{" "}
+          </h2>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -80,9 +86,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
         </motion.form>
       </div>
