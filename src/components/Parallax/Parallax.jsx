@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import "./parallax.css";
+import "./Parallax.css";
 
 import mountains from "/mountains.png";
 import { assets } from "../../assets/assets";
