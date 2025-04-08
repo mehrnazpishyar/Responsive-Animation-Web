@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import "./contact.css";
+import "./Contact.css";
 import { motion, useInView } from "framer-motion";
 
 const variants = {
